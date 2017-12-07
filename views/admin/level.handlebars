@@ -1,0 +1,26 @@
+<h2 class="display-1">Dam Levels</h2>
+<div class="table-striped table-hover table-responsive">
+    <table class="table" align="center">
+        <thead class="container">
+            <tr>
+                <th>#</th>
+                <th>Dam</th>
+                <th>Current</th>
+                <th>Inflow</th>
+                <th>Outflow</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>	
+            {{#each levels}}<tr>
+                    <td><a href="/admin/edit/{{this._id}}"><span class="glyphicon glyphicon-list-alt"></span></a></span></td>
+                    <td><a href="/admin/history/{{this.damId}}">{{this.name}}</a></td>
+                    <td><strong>{{this.level}}</strong><span class="text-success"> <small>feet</small></td>
+                    <td><strong>{{this.inflow}}</strong> <span class="glyphicon glyphicon-triangle-top text-success"> <small></small>cusecs</small></span></td>
+                    <td><strong>{{this.outflow}}</strong> <span class="glyphicon glyphicon-triangle-bottom text-danger"> <small>cusecs</small></span></td>
+                    <td><strong>{{this.updated}}</strong></td>
+                </tr>
+            {{/each}}   
+        </tbody>
+    </table>
+</div>

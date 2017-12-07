@@ -1,0 +1,27 @@
+<div class="panel panel-default">
+  <div class="panel-heading"><strong>{{title}}</strong></div>
+  <div class="panel-body">
+   <table class="table">
+    <thead class="container">
+    <tr>
+        <th>Date</th>
+        <th>Level<span class="text-primary"><small>(feet)</small></span></th>
+        <th>Inflow<span class="glyphicon glyphicon-triangle-top text-success"> <small></small>cusecs</small></span></th>
+        <th>Outflow<span class="glyphicon glyphicon-triangle-bottom text-danger"> <small>cusecs</small></span></th>
+        <th>Diff</th>
+    </tr>
+    </thead>
+      <tbody>	
+        {{#each levels}}
+        <tr>
+          <td><strong>{{this.updated}}</strong></td>
+          <td><strong>{{this.level}}</strong></td>
+          <td><strong>{{this.inflow}}</strong></td>
+          <td><strong>{{this.outflow}}</strong></td>
+          <td>0</td>
+        </tr>
+        {{/each}}
+    </tbody>
+  </table>
+</div>
+</div>

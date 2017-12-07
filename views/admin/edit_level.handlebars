@@ -1,0 +1,29 @@
+<form action="/admin/update" method="POST">
+    <div hidden="true">
+        <input type="text" name="_id" value="{{level._id}}">
+    </div>
+    <div>
+      <input type="Number" hidden="true" name="damId" value="{{level.damId}}"/>
+    </div>
+  <div class="form-group">
+    <label for="level">Level</label>
+    <input type="text" class="form-control" id="level" name="level" placeholder="Level" value="{{level.level}}">
+  </div>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Name" value="{{level.name}}">
+  </div>
+  <div class="form-group">
+    <label for="inflow">Inflow</label>
+    <input type="Number" class="form-control" id="inflow" name="inflow" placeholder="inflow" value="{{level.inflow}}">
+  </div>
+  <div class="form-group">
+    <label for="outflow">Outflow</label>
+    <input type="Number" class="form-control" id="outflow" name="outflow" placeholder="outflow" value="{{level.outflow}}">
+  </div>
+  <div class="form-group">
+    <label for="name">Date</label>
+    <input type="date" class="form-control" id="date" name="date" value="{{level.updated}}">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

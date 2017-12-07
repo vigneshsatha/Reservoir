@@ -1,0 +1,30 @@
+<div class="panel panel-default">
+  <div class="panel-heading"><strong>{{title}}</strong></div>
+  <div class="panel-body">
+   <table class="table">
+     <thead class="container">
+            <tr>
+              <th>Delete</th>
+                <th>Date</th>
+                <th>Level</th>
+                <th>Inflow</th>
+                <th>Outflow</th>
+                <th>Diff</th>
+            </tr>
+        </thead>
+        <tbody>	
+            {{#each levels}}
+            <tr>
+              <td><a href="/admin/history/delete/{{this._id}}"><strong>X</strong></a></td>
+              <td><strong>{{this.updated}}</strong></td>
+              <td><strong>{{this.level}}</strong><span class="text-success"> <small>feet</small></td>
+              <td><strong>{{this.inflow}}</strong> <span class="glyphicon glyphicon-triangle-top text-success"> <small></small>cusecs</small></span></td>
+              <td><strong>{{this.outflow}}</strong> <span class="glyphicon glyphicon-triangle-bottom text-danger"> <small>cusecs</small></span></td>
+              <td>0</td>
+            </tr>
+            {{/each}}   
+        </tbody>
+  </table>
+</div>
+</div>
+  
